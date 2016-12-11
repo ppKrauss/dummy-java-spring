@@ -12,11 +12,16 @@ Conventions or project decisions.
 * Spring-client: **AngularJS Material**
 
 # Installing 
+Supposing "fresh" system, without any pre-installed tools.
 
 ## Preparing UBUNTU
 
 As [digitalocean.com/community/how-to-java-apt](https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-get-on-ubuntu-16-04):
 ```sh
+sudo apt install git
+cd ~
+git clone https://github.com/ppKrauss/dummy-java-spring.git
+cd  dummy-java-spring
 sudo add-apt-repository ppa:webupd8team/java
 sudo apt-get update
 sudo apt install oracle-java8-installer
@@ -37,3 +42,6 @@ mvn -version  # check
 
 See [Installing Spring Boot](http://docs.spring.io/spring-boot/docs/current/reference/html/getting-started-installing-spring-boot.html) and [Building a RESTful Web Service](http://spring.io/guides/gs/rest-service/)
 
+`mvn package # at dummy-java-spring folder`
+
+See [maven.apache.org/maven-in-five-minutes](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html)...
