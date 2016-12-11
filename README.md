@@ -1,6 +1,17 @@
 # dummy-java-spring
 
-This is another "JAVA Spring for dummies", a fast how-to for UBUNTU 16 LTS.
+This is another "JAVA Spring for dummies", using some [convention over configuration](https://en.wikipedia.org/wiki/Convention_over_configuration) principles to focus on standard and most popular uses. It is also a fast "how-to for UBUNTU 16 LTS".  
+
+# General conventions 
+Conventions or project decisions. 
+* System (server): **UBUNTU 16 LTS**
+* Java version: **Oracle Java8**
+* Dependency management system ([build_automation](https://en.wikipedia.org/wiki/Build_automation)): **Maven 3.3**
+* SQL:  **PostgreSQL 9.6+** (for JSONb, etc.)
+* Spring: **Spring v4**,  [Spring boot](https://projects.spring.io/spring-framework/)
+* Spring-client: **AngularJS Material**
+
+# Installing 
 
 ## Preparing UBUNTU
 
@@ -19,3 +30,8 @@ update-alternatives --config java # and ENTER; shows /usr/lib/jvm/java-8-oracle/
 sudo apt install maven
 mvn -version  # check
 ...
+
+## Preparing server
+... ?
+
+## Preparing Spring
