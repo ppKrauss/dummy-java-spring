@@ -25,13 +25,15 @@ sudo apt install oracle-java8-installer
 java -version  # not say any relevant thing, eg. "Java(TM) SE Runtime Environment (build 1.8.0_111-b14)"
 update-alternatives --config java # and ENTER; shows /usr/lib/jvm/java-8-oracle/jre/bin/java
 
-
 #MAVEN 3
 sudo apt install maven
 mvn -version  # check
-...
+```
 
 ## Preparing server
 ... ?
 
 ## Preparing Spring
+
+See [Installing Spring Boot](http://docs.spring.io/spring-boot/docs/current/reference/html/getting-started-installing-spring-boot.html) and [Building a RESTful Web Service](http://spring.io/guides/gs/rest-service/)
+
