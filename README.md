@@ -7,7 +7,7 @@ This is another "JAVA Spring for dummies", a fast how-to for UBUNTU 16 LTS.
 As [digitalocean.com/community/how-to-java-apt](https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-get-on-ubuntu-16-04):
 ```sh
 add-apt-repository ppa:webupd8team/java
-# opcao apt install oracle-java8-set-default
+sudo apt-get update
 apt install oracle-java8-installer
   #  interface for Oracle screems, final:
   #  Oracle JRE 8 browser plugin installed; Oracle JDK 8 installed
