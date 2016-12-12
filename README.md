@@ -42,9 +42,18 @@ mvn -version  # check
 Avoid to use a pre-defined `pow.xml` whille you is a dummy ;-)
 Create your `pom.xml` from http://start.spring.io/  
 in a folder `myproject` and run it (in the folder) with 
+   `mvn install`
+Result in something like,
 
-`mvn install`
-
+```
+...
+[INFO] Installing /home/peter/dummy-java-spring/myproject/pom.xml to ...
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 17.878 s
+[INFO] ...
+```
 
 ## Next steps
 
