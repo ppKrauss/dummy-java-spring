@@ -55,7 +55,18 @@ Result in something like,
 [INFO] ...
 ```
 
-## Next steps
+## Preparing your IDE
+Convention: Atom, Eclipse or IntelliJ IDEA. 
+
+Installing Idea. 
+
+1. Go at [jetbrains.com/idea](http://www.jetbrains.com/idea/) and press "Download", and select eg. "Ultimate", and download it as "Linux without JDK",
+
+2. [download-thanks linuxWithoutJDK](http://www.jetbrains.com/idea/download/download-thanks.html?platform=linuxWithoutJDK)
+
+3. at downloaded folder you have something like `ideaIU-2016.3-no-jdk.tar.gz`, so ...
+
+# Next steps
 
 ... See [Installing Spring Boot](http://docs.spring.io/spring-boot/docs/current/reference/html/getting-started-installing-spring-boot.html) and [Building a RESTful Web Service](http://spring.io/guides/gs/rest-service/)
 
