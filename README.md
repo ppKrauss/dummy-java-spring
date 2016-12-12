@@ -39,8 +39,16 @@ mvn -version  # check
 ... ?
 
 ## Preparing Spring
+Avoid to use a pre-defined `pow.xml` whille you is a dummy ;-)
+Create your `pom.xml` from http://start.spring.io/  
+in a folder `myproject` and run it (in the folder) with 
 
-See [Installing Spring Boot](http://docs.spring.io/spring-boot/docs/current/reference/html/getting-started-installing-spring-boot.html) and [Building a RESTful Web Service](http://spring.io/guides/gs/rest-service/)
+`mvn install`
+
+
+## Next steps
+
+... See [Installing Spring Boot](http://docs.spring.io/spring-boot/docs/current/reference/html/getting-started-installing-spring-boot.html) and [Building a RESTful Web Service](http://spring.io/guides/gs/rest-service/)
 
 `mvn package # at dummy-java-spring folder`
 
