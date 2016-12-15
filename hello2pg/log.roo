@@ -1,0 +1,13 @@
+// Spring Roo 2.0.0.M3 [rev 20a0f71] log opened at 2016-12-15 20:08:23
+project setup --topLevelPackage com.foo2
+jpa setup --provider HIBERNATE --database POSTGRES --databaseName hello2bd --userName postgres --password postgres
+entity jpa --class ~.domain.Timer
+field string --fieldName message --notNull
+repository jpa --all
+service --all
+web mvc setup
+web mvc view setup --type THYMELEAF
+web mvc controller --all --responseType THYMELEAF
+web mvc controller --all --pathPrefix /api
+quit
+// Spring Roo 2.0.0.M3 [rev 20a0f71] log closed at 2016-12-15 20:10:59
