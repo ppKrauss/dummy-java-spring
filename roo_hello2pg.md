@@ -2,7 +2,7 @@ This is a variation of [roo_hello.md](roo_hello.md), using PostgreSQL as persist
 
 # Preparing
 
-```
+```sh
 cd ~
 mkdir hello2pg 
 cd hello2pg
@@ -11,6 +11,7 @@ cd hello2pg
 **Preparing Roo**: as [roo_hello.md](roo_hello.md) preare and use Roo v2, creating the terminal command `roo2`.
 
 **Preparing PostgreSQL**:  suppose standard PostgreSQL user "postgres" with password "postgres". Use `psql -h localhost -U postgres` 
+
 ```sql
 CREATE DATABASE hello2bd
 WITH OWNER = postgres
