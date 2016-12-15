@@ -35,8 +35,7 @@ project setup --topLevelPackage com.foo2
 jpa setup --provider HIBERNATE --database POSTGRES --databaseName hello2bd
 ```
 
-Here's a curious problem: do not adink try to include `--username`, even when  TAB say that you can... Run the above. 
-It will say "Created ..." and ok... Open another terminal and edit (ex. using `nano`) the file `./src/main/resources/application.properties`
+Here's a curious problem: sometimes run, sometimes `--username`and `--password` are not permited... If you have this curious problem, a reboot machine is a solution :-) ... Another solution is to run the above and wait: it will say "Created ...", it is ok... Open another terminal and edit (ex. using `nano`) the file `./src/main/resources/application.properties`
 
 ```
 spring.datasource.driver-class-name=org.postgresql.Driver
