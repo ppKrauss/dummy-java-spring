@@ -73,3 +73,9 @@ Installing Idea.
 `mvn package # at dummy-java-spring folder`
 
 See [maven.apache.org/maven-in-five-minutes](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html)...
+
+# ROO!
+The [spring-roo project](http://projects.spring.io/spring-roo/) is the best!
+
+For you, a dummy, see how to start with [roo_hello.md](roo_hello.md) and  [roo_hello2pg.md](roo_hello2pg.md) for PostgreSQL persistence.
+
