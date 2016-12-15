@@ -1,4 +1,4 @@
-This is a variation of [roo_hello.md](roo_hello.md), using PostgreSQL as persistence. It is near the same as [spring.io/spring-roo/#running-from-shell](http://projects.spring.io/spring-roo/#running-from-shell) fast guide example.
+This is a variation of [roo_hello.md](roo_hello.md), using PostgreSQL as persistence.... Execept by database connection, all script is the [spring.io/spring-roo/#running-from-shell](http://projects.spring.io/spring-roo/#running-from-shell) fast guide 10 lines example.
 
 Let's call *hello2pg*, the database and the project.
 
