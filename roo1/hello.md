@@ -5,7 +5,9 @@ The  [official tutorial spring-roo](http://projects.spring.io/spring-roo/#runnin
 
 # Preparing
 
-Check [Roo v1.X most recent version](http://projects.spring.io/spring-roo/#download-widget) and change below when need. Summarizing and **executing all quickly via the terminal**:
+Check [Roo v1.X most recent version](http://projects.spring.io/spring-roo/#download-widget) and change below when need. 
+
+Skip this step if you have *Roo1* installed. Summarizing and **executing all quickly via the terminal**:
 
 ```sh
 mkdir sandbox # or whatever you like 
@@ -17,22 +19,32 @@ sudo ln -s ~/sandbox/spring-roo-1.3.2/bin/roo.sh /usr/bin/roo
 rm *.zip  # optional
 ```
 
-The demo,
+Preparing the demo... Needs only a fresh folder:
 ```
 cd ~
-mkdir hello 
+mkdir hello  # or whatever you like, as testRoo1Hello1
 cd hello
 ```
+
 ## script *hello*!
 
 Now just run the command `roo` and (giving ENTER one by one and waiting)
 
 ```
-project setup --topLevelPackage com.foo
+project --topLevelPackage   com.testRoo1Hello1
+```
+... If an error, run the command `download accept terms of use`... And redo the `project` command above. Coninuing:
+
+```
 jpa setup --provider HIBERNATE --database HYPERSONIC_IN_MEMORY
 entity jpa --class ~.domain.Timer
 field string --fieldName message --notNull
-repository jpa --all
+```  
+
+... hum... now the commands bellow need to be translated to Roo v1.3:
+
+```
+repository jpa --all  
 service --all
 web mvc setup
 web mvc view setup --type THYMELEAF
