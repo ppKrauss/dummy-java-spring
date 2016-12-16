@@ -32,7 +32,7 @@ Run `roo2` and use the database "hello2db":
 
 ```
 project setup --topLevelPackage com.testroo2Hello2pg
-jpa setup --provider HIBERNATE --database POSTGRES --databaseName hello2db
+jpa setup --provider HIBERNATE --database POSTGRES --databaseName hello2db --userName postgresql --password postgres
 ```
 
 Here's a curious problem: sometimes run, sometimes `--username`and `--password` are not permited... If you have this curious problem, a reboot machine is a solution :-) ... Another solution is to run the above and wait: it will say "Created ...", it is ok... Open another terminal and edit (ex. using `nano`) the file `./src/main/resources/application.properties`
