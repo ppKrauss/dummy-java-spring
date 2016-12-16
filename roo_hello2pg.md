@@ -43,8 +43,10 @@ spring.datasource.url=jdbc\:postgresql\://localhost\:5432/hello2bd
 spring.datasource.username=postgres
 spring.datasource.password=postgres
 spring.jpa.hibernate.naming.strategy=org.hibernate.cfg.ImprovedNamingStrategy
+spring.jpa.hibernate.ddl-auto=create-drop
 ```
 See that lines *username* and *password* was added.
+Another importantant issue, that is perhaps a Roo v2 bug, is that you need to add (by hand) the magic line `spring.jpa.hibernate.ddl-auto=create-drop` (thanks to  [jcgarcia answer](http://stackoverflow.com/a/41180447)).
 
 Now we can back to the first terminal running *roo* and continue,
 
@@ -60,4 +62,4 @@ web mvc controller --all --pathPrefix /api
 quit
 ```
 Finesh with `mvn spring-boot:run`!
-
+Go to your http://localhost:8080/timers/
