@@ -1,13 +1,13 @@
 This is a variation of [roo_hello.md](roo_hello.md), using PostgreSQL as persistence.... Execept by database connection, all script is the [spring.io/spring-roo/#running-from-shell](http://projects.spring.io/spring-roo/#running-from-shell) fast guide 10 lines example.
 
-Let's call *hello2pg*, the database and the project.
+Let's call *hello2db*, the database and *Hello2pg* or *testRoo2Hello2pg* the project.
 
 # Preparing
 
 ```sh
 cd ~
-mkdir hello2pg 
-cd hello2pg
+mkdir testRoo2Hello2pg
+cd testRoo2Hello2pg
 ```
 
 **Preparing Roo**: as [roo_hello.md](roo_hello.md) preare and use Roo v2, creating the terminal command `roo2`.
@@ -31,7 +31,7 @@ WITH OWNER = postgres
 Run `roo2` and use the database "hello2db":
 
 ```
-project setup --topLevelPackage com.foo2
+project setup --topLevelPackage com.testroo2Hello2pg
 jpa setup --provider HIBERNATE --database POSTGRES --databaseName hello2db
 ```
 
