@@ -79,9 +79,9 @@ The [spring-roo project](http://projects.spring.io/spring-roo/) is the best!
 
 For you, a dummy, see how to start with
 
-* [roo_hello.md](roo_hello.md), the 10-lines oficial Roo test-and-demo script. 
+* [hello.md](roo2/hello.md), the 10-lines oficial Roo test-and-demo script. 
 
-* [roo_hello2pg.md](roo_hello2pg.md) for PostgreSQL persistence.
+* [hello2pg.md](roo2/hello2pg.md) for PostgreSQL persistence.
 
-* [roo_hello3pg.md](roo_hello3pg.md) for Roo's `database reverse engineer` ([docs.spring's Chapter 9](http://docs.spring.io/spring-roo/reference/html/base-dbre.html)), your first test-and-demo for SQL reengineering.
+* [hello3pg.md](roo2/hello3pg.md) for Roo's `database reverse engineer` ([docs.spring's Chapter 9](http://docs.spring.io/spring-roo/reference/html/base-dbre.html)), your first test-and-demo for SQL reengineering.
 
