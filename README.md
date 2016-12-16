@@ -83,5 +83,5 @@ For you, a dummy, see how to start with
 
 * [roo_hello2pg.md](roo_hello2pg.md) for PostgreSQL persistence.
 
-* [roo_hello3pg.md](roo_hello3pg.md) for Roo's `database reverse engineer` ([chapter 9](docs.spring.io/spring-roo/reference/html/base-dbre.html)), your first test-and-demo.
+* [roo_hello3pg.md](roo_hello3pg.md) for Roo's `database reverse engineer` ([docs.spring's Chapter 9](http://docs.spring.io/spring-roo/reference/html/base-dbre.html)), your first test-and-demo for SQL reengineering.
 
