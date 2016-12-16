@@ -47,27 +47,4 @@ database.password=postgres
 spring.jpa.hibernate.naming.strategy=org.hibernate.cfg.ImprovedNamingStrategy
 spring.jpa.hibernate.ddl-auto=create-drop
 ```
-
-Now we can back to the first terminal running *roo* and continue,
-
-`database reverse engineer --schema public --includeTables "test1"`
-
-... hum... Errors:
-
-```
-Located add-ons that may offer this JDBC driver
-2 found, sorted by rank; T = trusted developer; R = Roo 1.3 compatible
-ID T R DESCRIPTION -------------------------------------------------------------
-01 Y Y 9.1.0.901-1_0001 Postgres #jdbcdriver...
-02 Y Y 9.1.0.901_0001 Postgres #jdbcdriver...
---------------------------------------------------------------------------------
-[HINT] use 'addon info id --searchResultId ..' to see details about a search result
-[HINT] use 'addon install id --searchResultId ..' to install a specific search result, or
-[HINT] use 'addon install bundle --bundleSymbolicName TAB' to install a specific add-on version
-JDBC driver not available for 'org.postgresql.Driver'
-```
- Used 
- 
- `sudo apt  install libpostgresql-jdbc-java libpostgresql-jdbc-java-doc`
-
-but not change error ... see http://stackoverflow.com/a/13867021
+....
