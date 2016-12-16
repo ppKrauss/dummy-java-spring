@@ -75,7 +75,8 @@ Installing Idea.
 See [maven.apache.org/maven-in-five-minutes](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html)...
 
 # ROO!
-The [spring-roo project](http://projects.spring.io/spring-roo/) is the best!
+
+The [Spring Roo project](http://projects.spring.io/spring-roo/) is the best! [Roo1.3.X is stable](http://projects.spring.io/spring-roo/#download-widget), and [Roo v2-RC1](https://jira.spring.io/browse/ROO/?selectedTab=com.atlassian.jira.jira-projects-plugin:summary-panel) is near!
 
 For you, a dummy, see how to start with **Roo2**
 
