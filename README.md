@@ -77,11 +77,18 @@ See [maven.apache.org/maven-in-five-minutes](https://maven.apache.org/guides/get
 # ROO!
 The [spring-roo project](http://projects.spring.io/spring-roo/) is the best!
 
-For you, a dummy, see how to start with
+For you, a dummy, see how to start with **Roo2**
 
-* [hello.md](roo2/hello.md), the 10-lines oficial Roo test-and-demo script. 
+* [hello.md](roo2/hello.md), the 10-lines oficial Roo2 test-and-demo script. 
 
 * [hello2pg.md](roo2/hello2pg.md) for PostgreSQL persistence.
 
 * [hello3pg.md](roo2/hello3pg.md) for Roo's `database reverse engineer` ([docs.spring's Chapter 9](http://docs.spring.io/spring-roo/reference/html/base-dbre.html)), your first test-and-demo for SQL reengineering.
 
+To test Roo v1, the same adapted for **Roo1** env,
+
+* [hello.md](roo1/hello.md), an adaptation for Roo1, of the 10-lines oficial Roo2 test-and-demo script. 
+
+* [hello2pg.md](roo1/hello2pg.md) for PostgreSQL persistence.
+
+* [hello3pg.md](roo1/hello3pg.md) for Roo's `database reverse engineer`.
