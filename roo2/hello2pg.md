@@ -15,7 +15,7 @@ cd hello2pg
 **Preparing PostgreSQL**:  suppose standard PostgreSQL user "postgres" with password "postgres". Use `psql -h localhost -U postgres` 
 
 ```sql
-CREATE DATABASE hello2bd
+CREATE DATABASE hello2db
 WITH OWNER = postgres
         ENCODING = 'UTF8'
         TABLESPACE = pg_default
@@ -28,18 +28,18 @@ WITH OWNER = postgres
 
 ## The project
 
-Run `roo2` and use the database "hello2bd":
+Run `roo2` and use the database "hello2db":
 
 ```
 project setup --topLevelPackage com.foo2
-jpa setup --provider HIBERNATE --database POSTGRES --databaseName hello2bd
+jpa setup --provider HIBERNATE --database POSTGRES --databaseName hello2db
 ```
 
 Here's a curious problem: sometimes run, sometimes `--username`and `--password` are not permited... If you have this curious problem, a reboot machine is a solution :-) ... Another solution is to run the above and wait: it will say "Created ...", it is ok... Open another terminal and edit (ex. using `nano`) the file `./src/main/resources/application.properties`
 
 ```
 spring.datasource.driver-class-name=org.postgresql.Driver
-spring.datasource.url=jdbc\:postgresql\://localhost\:5432/hello2bd
+spring.datasource.url=jdbc\:postgresql\://localhost\:5432/hello2db
 spring.datasource.username=postgres
 spring.datasource.password=postgres
 spring.jpa.hibernate.naming.strategy=org.hibernate.cfg.ImprovedNamingStrategy
