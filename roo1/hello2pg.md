@@ -33,29 +33,38 @@ WITH OWNER = postgres
 Run `roo` and use the database "hello2db":
 
 ```
-project setup --topLevelPackage com.testRoo1Hello2pg
-jpa setup --provider HIBERNATE --database POSTGRES --databaseName hello2bd
+project --topLevelPackage   com.testRoo1Hello2pg
+jpa setup --provider HIBERNATE --database POSTGRES --databaseName hello2db --userName postgresql --password postgres
 ```
-
-Here's a curious problem: sometimes run, sometimes `--username`and `--password` are not permited... If you have this curious problem, a reboot machine is a solution :-) ... Another solution is to run the above and wait: it will say "Created ...", it is ok... Open another terminal and edit (ex. using `nano`) the file `./src/main/resources/application.properties`
+The last command generates a warning "Please update your database details in src/main/resources/META-INF/spring/database.properties", so, let's  update: add  in another terminal (ex. with `nano`) the second block of `spring.jpa` lines:
 
 ```
-spring.datasource.driver-class-name=org.postgresql.Driver
-spring.datasource.url=jdbc\:postgresql\://localhost\:5432/hello2bd
-spring.datasource.username=postgres
-spring.datasource.password=postgres
+database.driverClassName=org.postgresql.Driver
+database.url=jdbc\:postgresql\://localhost\:5432/hello2db
+database.username=postgresql
+database.password=postgres
+
 spring.jpa.hibernate.naming.strategy=org.hibernate.cfg.ImprovedNamingStrategy
 spring.jpa.hibernate.ddl-auto=create-drop
 ```
-See that lines *username* and *password* was added.
-Another importantant issue, that is perhaps a Roo v2 bug, is that you need to add (by hand) the magic line `spring.jpa.hibernate.ddl-auto=create-drop` (thanks to  [jcgarcia answer](http://stackoverflow.com/a/41180447)).
 
 Now we can back to the first terminal running *roo* and continue,
 
-```
-entity jpa --class ~.domain.Timer
+`database reverse engineer --schema public --includeTables "test1"`
+
 ...
-quit
+
 ```
-Finesh with `mvn spring-boot:run`!
-Go to your http://localhost:8080/timers/
+Located add-ons that may offer this JDBC driver
+2 found, sorted by rank; T = trusted developer; R = Roo 1.3 compatible
+ID T R DESCRIPTION -------------------------------------------------------------
+01 Y Y 9.1.0.901-1_0001 Postgres #jdbcdriver...
+02 Y Y 9.1.0.901_0001 Postgres #jdbcdriver...
+--------------------------------------------------------------------------------
+[HINT] use 'addon info id --searchResultId ..' to see details about a search result
+[HINT] use 'addon install id --searchResultId ..' to install a specific search result, or
+[HINT] use 'addon install bundle --bundleSymbolicName TAB' to install a specific add-on version
+JDBC driver not available for 'org.postgresql.Driver'
+```
+
+
