@@ -41,7 +41,7 @@ Now we can back to the first terminal running *roo* and continue,
 
 `database reverse engineer --schema public --includeTables "test1"`
 
-...
+... hum... Errors:
 
 ```
 Located add-ons that may offer this JDBC driver
@@ -55,4 +55,8 @@ ID T R DESCRIPTION -------------------------------------------------------------
 [HINT] use 'addon install bundle --bundleSymbolicName TAB' to install a specific add-on version
 JDBC driver not available for 'org.postgresql.Driver'
 ```
+ Used 
+ 
+ `sudo apt  install libpostgresql-jdbc-java libpostgresql-jdbc-java-doc`
 
+but not change error ... see http://stackoverflow.com/a/13867021
