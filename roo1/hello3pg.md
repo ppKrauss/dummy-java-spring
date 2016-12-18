@@ -2,8 +2,6 @@
 
 This is a variation of [hello2pg.md](hello2pg.md)...
 
-
-
 # Preparing
 
 ```sh
@@ -23,7 +21,7 @@ Run `roo` and use the database "hello2db":
 
 ```
 project --topLevelPackage   com.testRoo1Hello2pg
-jpa setup --provider HIBERNATE --database POSTGRES --databaseName hello2db --userName postgresql --password postgres
+jpa setup --provider HIBERNATE --database POSTGRES --databaseName hello2db --userName postgres --password postgres
 ```
 The last command generates a warning "Please update your database details in src/main/resources/META-INF/spring/database.properties", so, let's  update: add  in another terminal (ex. with `nano`) the second block of `spring.jpa` lines:
 
@@ -55,8 +53,18 @@ ID T R DESCRIPTION -------------------------------------------------------------
 [HINT] use 'addon install bundle --bundleSymbolicName TAB' to install a specific add-on version
 JDBC driver not available for 'org.postgresql.Driver'
 ```
- Used 
- 
- `sudo apt  install libpostgresql-jdbc-java libpostgresql-jdbc-java-doc`
+So, [as remembered by jcgarcia here](http://stackoverflow.com/a/41199193/287948), *"... if your read the message, you could check that you are able to use the following command to install the Postgres JDBC driver into the OSGi context"*. Let's use also some knowledge about it:
 
-but not change error ... see http://stackoverflow.com/a/13867021
+* `addon info id --searchResultId 01` list info of the PostgreSQL Driver, confirming that it's ID is 01.
+
+* `addon install id --searchResultId 01`  will in fact install the driver (!)
+
+* `addon install bundle --bundleSymbolicName 01` or `addon install bundle --bundleSymbolicName postgresql-jdbc4` ... error .. but ok... is working....
+
+Now you can do the Roo command,
+```
+database reverse engineer --schema public --includeTables "test1"
+
+```
+See [Wiki](https://github.com/ppKrauss/dummy-java-spring/wiki/Generated-codes-for-testRoo1Hello3pg) to compare results.
+
