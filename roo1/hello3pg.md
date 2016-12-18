@@ -1,5 +1,3 @@
-(UNDER CONSTRUCTION)
-
 This is a variation of [hello2pg.md](hello2pg.md)...
 
 # Preparing
@@ -33,7 +31,7 @@ CREATE TABLE test2 (
 Run `roo` and use the database "hello2db":
 
 ```
-project --topLevelPackage   com.testRoo1Hello2pg
+project --topLevelPackage   com.testRoo1Hello3pg
 jpa setup --provider HIBERNATE --database POSTGRES --databaseName hello2db --userName postgres --password postgres
 database reverse engineer --schema public --includeTables "test1 test2"
 quit
