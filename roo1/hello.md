@@ -39,18 +39,13 @@ project --topLevelPackage   com.testRoo1Hello1
 jpa setup --provider HIBERNATE --database HYPERSONIC_IN_MEMORY
 entity jpa --class ~.domain.Timer
 field string --fieldName message --notNull
+web mvc setup
+web mvc controller --class ~.domain.Timer
+quit
 ```  
 
-... hum... now the commands bellow need to be translated to Roo v1.3:
+Ok! Run Maven with `mvn spring-boot:run`... At terminal you see
 
-```
-web mvc setup
-web mvc view setup --type THYMELEAF
-web mvc controller --all --responseType THYMELEAF
-web mvc controller --all --pathPrefix /api
-quit
-```
-Ok! Run Maven with `mvn spring-boot:run`... At terminal you see  
 ```
 : Started FooApplication in 8.403 seconds (JVM running for 8.917)
 ```
@@ -66,6 +61,10 @@ Commenting the "translations" used (here each item is a Roo2 command),
  
  * `service --all`. Only removed,  no translation, no need. <br/>Again, Spring Roo1 not use it. Controllers uses entitiy methods directly to access to the database. Also, all the business logic have been implemented in controllers directly.
 
+ * Comands for `THYMELEAF`:  `web mvc view setup` and `web mvc controller`. .. Not need any to replace?
+
+ * `web mvc controller`: adapted .... correct?
+ 
 For original samples, see `~/sandbox/spring-roo-1.3.2/samples`.
 
 For more details, see [jcgarcia tips](http://stackoverflow.com/a/41199107/287948).
