@@ -9,10 +9,23 @@ cd ~
 mkdir testRoo1Hello3pg 
 cd testRoo1Hello3pg
 ```
-... create a table as Model reference,
+... create two test tables, using `psql -h localhost -U postgres hello2db`, 
 
 ```sql
-CREATE TABLE test1 (a integer DEFAULT 99 NOT NULL CHECK(a>1));   
+CREATE TABLE test1 (
+	a integer DEFAULT 99 NOT NULL CHECK(a>1), 
+	hellomum text, -- for search the string "hellodad" in a grep of generated java
+	UNIQUE(a)  -- to be referenced as PK, need it.
+);   
+
+CREATE TABLE test2 (
+	id serial NOT NULL PRIMARY KEY, 
+	a integer NOT NULL REFERENCES test1(a) ON DELETE CASCADE, 	
+	hellodad text, -- for search the string "hellodad" in a grep of generated java 
+	jpure JSON,   -- some exoctic types, for test the "power of recognition" in Root.
+	jbin JSONb, 
+	xtext xml
+);
 ```
 
 ## The project
@@ -22,8 +35,16 @@ Run `roo` and use the database "hello2db":
 ```
 project --topLevelPackage   com.testRoo1Hello2pg
 jpa setup --provider HIBERNATE --database POSTGRES --databaseName hello2db --userName postgres --password postgres
+database reverse engineer --schema public --includeTables "test1 test2"
+quit
 ```
-The last command generates a warning "Please update your database details in src/main/resources/META-INF/spring/database.properties", so, let's  update: add  in another terminal (ex. with `nano`) the second block of `spring.jpa` lines:
+There are a JAVA code! See it at the generated folder `src/... `  or a dump [here at Wiki](https://github.com/ppKrauss/dummy-java-spring/wiki/Generated-codes-for-testRoo1Hello3pg), to compare your results.
+
+## WORKAROUNDS
+
+### After `jpa setup` some handle config 
+
+The `jpa setup` command generates a warning *"Please update your database details in src/main/resources/META-INF/spring/database.properties"*, so, let's  update: add  in another terminal (ex. with `nano`) the second block of `spring.jpa` lines:
 
 ```
 database.driverClassName=org.postgresql.Driver
@@ -35,11 +56,10 @@ spring.jpa.hibernate.naming.strategy=org.hibernate.cfg.ImprovedNamingStrategy
 spring.jpa.hibernate.ddl-auto=create-drop
 ```
 
-Now we can back to the first terminal running *roo* and continue,
+### Errors  at `database reverse engineer`
+After try to generate code with  `database reverse engineer --schema public --includeTables "test1 test2"`
 
-`database reverse engineer --schema public --includeTables "test1"`
-
-... hum... Errors:
+is possible errors, in a first Roo use. This is a dump of the message:
 
 ```
 Located add-ons that may offer this JDBC driver
@@ -63,8 +83,5 @@ So, [as remembered by jcgarcia here](http://stackoverflow.com/a/41199193/287948)
 
 Now you can do the Roo command,
 ```
-database reverse engineer --schema public --includeTables "test1"
-
+database reverse engineer --schema public --includeTables "test1 test2"
 ```
-See [Wiki](https://github.com/ppKrauss/dummy-java-spring/wiki/Generated-codes-for-testRoo1Hello3pg) to compare results.
-
