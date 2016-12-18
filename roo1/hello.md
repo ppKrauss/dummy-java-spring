@@ -22,11 +22,11 @@ rm *.zip  # optional
 Preparing the demo... Needs only a fresh folder:
 ```
 cd ~
-mkdir hello  # or whatever you like, as testRoo1Hello1
-cd hello
+mkdir testRoo1Hello1  # or whatever you like 
+cd testRoo1Hello1
 ```
 
-## script *hello*!
+## Roo script for *testRoo1Hello1*!
 
 Now just run the command `roo` and (giving ENTER one by one and waiting)
 
@@ -44,8 +44,6 @@ field string --fieldName message --notNull
 ... hum... now the commands bellow need to be translated to Roo v1.3:
 
 ```
-repository jpa --all  
-service --all
 web mvc setup
 web mvc view setup --type THYMELEAF
 web mvc controller --all --responseType THYMELEAF
@@ -59,3 +57,15 @@ Ok! Run Maven with `mvn spring-boot:run`... At terminal you see
 So, you can run http://localhost:8080 or http://localhost:8080/timers/ that is the application.
 
 To shotdown the server, at the terminal press *^C* to kill, so it say "[INFO] BUILD SUCCESS ...Finished...".
+
+## Abot translations from Roo2 to Roo1
+
+Commenting the "translations" used (here each item is a Roo2 command),
+
+ * `repository jpa --all`. Only removed,  no translation, no need. <br/>Spring Roo1 manages the data access layer using ActiveRecord... However, in Spring Roo2 the data access layer uses Spring Data Repositories. So in Spring Roo1 there's not an equivalent to repository `jpa` command. So just create an entity in Roo1.
+ 
+ * `service --all`. Only removed,  no translation, no need. <br/>Again, Spring Roo1 not use it. Controllers uses entitiy methods directly to access to the database. Also, all the business logic have been implemented in controllers directly.
+
+For original samples, see `~/sandbox/spring-roo-1.3.2/samples`.
+
+For more details, see [jcgarcia tips](http://stackoverflow.com/a/41199107/287948).
