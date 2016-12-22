@@ -1,7 +1,7 @@
 psql -h localhost -U postgres
 
 ```sql
-CREATE DATABASE northwind
+CREATE DATABASE clinic
 WITH OWNER = postgres
         ENCODING = 'UTF8'
         TABLESPACE = pg_default
