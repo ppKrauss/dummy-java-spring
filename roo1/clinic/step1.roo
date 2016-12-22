@@ -1,0 +1,4 @@
+project --topLevelPackage com.springsource.petclinic
+
+jpa setup --provider HIBERNATE --database POSTGRES --databaseName clinic --userName postgresql --password postgres
+
