@@ -6,6 +6,6 @@ project setup --topLevelPackage org.springframework.roo.petclinic
 
 // Setup the data access layer
 //old jpa setup --provider HIBERNATE --database HYPERSONIC_IN_MEMORY
-jpa setup --provider HIBERNATE --database POSTGRES --databaseName northwind --userName postgresql --password postgres
+jpa setup --provider HIBERNATE --database POSTGRES --databaseName clinic --userName postgresql --password postgres
 
 
