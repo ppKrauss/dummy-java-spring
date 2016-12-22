@@ -24,5 +24,5 @@ spring.jpa.hibernate.ddl-auto=create-drop
 So, continue
 
 ```sh
-roo2 < step2.roo
+roo < step2.roo
 ```
