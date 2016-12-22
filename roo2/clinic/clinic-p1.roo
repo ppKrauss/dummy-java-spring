@@ -1,0 +1,11 @@
+// Project setup, part-1
+////////////////////////
+
+// Create the Spring Boot application
+project setup --topLevelPackage org.springframework.roo.petclinic
+
+// Setup the data access layer
+//old jpa setup --provider HIBERNATE --database HYPERSONIC_IN_MEMORY
+jpa setup --provider HIBERNATE --database POSTGRES --databaseName northwind --userName postgresql --password postgres
+
+
