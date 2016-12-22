@@ -4,7 +4,7 @@ At the `clinic` folder run this sequence of shell commands:
 
 ```sh
 cd ~/dummy-java-spring/roo2/clinic  # or whatever
-psql -h localhost -U postgres < clinic.
+psql -h localhost -U postgres < clinic-p1.sql # take password and CREATE DATABASE
 roo2 < clinic-p1.roo
 nano src/main/resources/application.properties
 ```
