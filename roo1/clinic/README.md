@@ -14,7 +14,7 @@ At edit, as in the [hello2pg.md](https://github.com/ppKrauss/dummy-java-spring/b
 ```
 database.driverClassName=org.postgresql.Driver
 database.url=jdbc\:postgresql\://localhost\:5432/clinic
-database.username=postgresql
+database.username=postgres
 database.password=postgres
 
 spring.jpa.hibernate.naming.strategy=org.hibernate.cfg.ImprovedNamingStrategy
